@@ -1,17 +1,23 @@
 package com.employeeWageCalculator;
 
 public class EmployeeWage {
+	
+	private static final int EmployeeWagePerHour = 20;
+	private static final int FullDayHours = 8;
 
 	public static void main(String args[]) {
 		
-		int EmployeeStatus = (int) (Math.floor(Math.random() * 10) % 2);
+		int employeeStatus = (int) (Math.floor(Math.random() * 10) % 2);
+		int employeeWage = 0;
 		
-		if (EmployeeStatus == 1) {
-			System.out.println("Employee is present");
+		if (employeeStatus == 1) {
+			employeeWage = EmployeeWagePerHour * FullDayHours;
 		}
 		else {
-			System.out.println("Employee is absent");
+			employeeWage = 0;
 		}
+		
+		System.out.println("Employee wage calculated is " + employeeWage);
 		
 	}
 }
